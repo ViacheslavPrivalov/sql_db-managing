@@ -44,4 +44,16 @@ public class StudentService {
 
         return studentRepository.findByNameContainingIgnoreCase(name).getFaculty().getName();
     }
+
+    public Integer countAll() {
+        return studentRepository.countAll();
+    }
+
+    public Long averageAge() {
+        return studentRepository.averageAge();
+    }
+
+    public Collection<Student> last5Students() {
+        return studentRepository.last5Students();
+    }
 }
